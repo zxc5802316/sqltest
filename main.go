@@ -20,7 +20,7 @@ func main() {
 	//	fmt.Printf("stack : \n %+v \n",err)
 	//}
 	//
-	users, err := dao.QueryUserByName1("ii")
+	user, err := dao.QueryUserByName1("ii")
 	if err != nil {
 		fmt.Printf("stack : \n %+v \n", err)
 		if errors.Is(err, sql.ErrNoRows) {
@@ -28,7 +28,7 @@ func main() {
 		}
 		return
 	}
-	fmt.Printf("%v", users)
+	fmt.Printf("%v", user)
 }
 
 func doSomething() {
